@@ -12,19 +12,19 @@ client.connect({
 });
 
 const run = async () => {
-  await client.execute(`CREATE DATABASE IF NOT EXISTS ${DATABASE}`);
+  //  await client.execute(`CREATE DATABASE IF NOT EXISTS ${DATABASE}`);
   await client.execute(`USE ${DATABASE}`);
-  await client.execute(`DROP TABLE IF EXISTS ${TABLE.KIRBY}`);
+  //await client.execute(`DROP TABLE IF EXISTS ${TABLE.KIRBY}`);
 
-  await client.execute(`
-    CREATE TABLE ${TABLE.KIRBY} (
-        id int(11) NOT NULL AUTO_INCREMENT,
-        event varchar(100) NOT NULL,
-        isCompleted boolean NOT NULL default false,
-        date varchar(100) NOT NULL,
-        PRIMARY KEY (id)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-  `);
+  // await client.execute(`
+  //   CREATE TABLE ${TABLE.KIRBY} (
+  //       id int(11) NOT NULL AUTO_INCREMENT,
+  //       event varchar(100) NOT NULL,
+  //       isCompleted boolean NOT NULL default false,
+  //       date varchar(100) NOT NULL,
+  //       PRIMARY KEY (id)
+  //   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  // `);
 };
 
 run();
